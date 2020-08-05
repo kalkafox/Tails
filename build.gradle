@@ -12,12 +12,12 @@ apply plugin: 'net.minecraftforge.gradle'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
-version = "1.13.2-1.10.0"
+version = "1.15.2-1.11.0-unofficial"
 group = "uk.kihira.tails"
 archivesBaseName = "Tails"
 
 minecraft {
-    mappings channel: 'snapshot', version: '20180921-1.13'
+    mappings channel: 'snapshot', version: '20200514-1.15.1'
     runs {
         client = {
             // recommended logging data for a userdev environment
@@ -39,17 +39,17 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.13.2-25.0.13'
+    minecraft 'net.minecraftforge:forge:1.15.2-31.2.36'
 }
 
 jar {
     manifest {
-        attributes(["Specification-Title": "examplemod",
-                    "Specification-Vendor": "examplemodsareus",
-                    "Specification-Version": "24.0", // We are version 1 of the modlauncher specification
+        attributes(["Specification-Title": "tails",
+                    "Specification-Vendor": "kihira",
+                    "Specification-Version": "1", // We are version 1 of the modlauncher specification
                     "Implementation-Title": project.name,
                     "Implementation-Version": "${version}",
-                    "Implementation-Vendor" :"examplemodsareus",
+                    "Implementation-Vendor" :"kihira",
                     "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")],)
     }
 }
